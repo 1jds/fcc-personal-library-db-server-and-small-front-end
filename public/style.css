@@ -1,0 +1,60 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; */
+}
+
+header {
+  background: lightgreen;
+  min-height: 70px;
+  display: grid;
+  place-content: center;
+}
+
+.border {
+  border: 1px solid;
+  padding: 10px;
+  background: red;
+}
+
+#sampleui {
+  background: pink;
+  padding: 1rem 2rem;
+}
+
+#sampleposting {
+  text-align: center;
+  background: yellow;
+  padding: 1rem 2rem;
+}
+
+#userstories {
+  background: green;
+}
+
+form {
+  padding: 5px;
+  background: dodgerblue;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  background: aqua;
+}
+
+input {
+  /* margin-bottom: 5px; */
+  background: orange;
+}
+
+footer {
+  background: #181818;
+  min-height: 50px;
+  display: grid;
+  place-content: center;
+  color: white;
+}
