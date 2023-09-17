@@ -1,17 +1,41 @@
 body {
   font-family: system-ui;
   margin: 0;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem; */
+  line-height: 1.5;
+  background: #2e2e2e;
 }
 
-header {
-  background: lightgreen;
+/* .page-wrapper {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+.header-title {
+  background: #005d9a;
+  color: #fff;
+  margin: 0;
+  /* padding: 1rem; */
   min-height: 70px;
   display: grid;
   place-content: center;
+}
+
+.hero-header {
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    overflow: hidden;
+    background: #005d9a;  /* fallback for old browsers */
+  /* rgb(0, 93, 154) */
+  /* rgb(3, 66, 107) */
+    background: linear-gradient(rgb(3,66,107,0.8), rgb(0,93,154,0.8)), url("https://images.unsplash.com/photo-1530608031805-8e170c1b793a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2748&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  margin-bottom: -5vw;
 }
 
 .border {
@@ -21,14 +45,40 @@ header {
 }
 
 #sampleui {
-  background: pink;
-  padding: 1rem 2rem;
+  background: #005d9a;
+  /* rgb(0, 93, 154) */
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sampleui > * {
+  max-width: 1000px;
+  min-width: 800px;
+  /* Change this */
 }
 
 #sampleposting {
   text-align: center;
-  background: yellow;
-  padding: 1rem 2rem;
+  background: #f0f0f0;
+  /* background-image: linear-gradient(
+    45deg,
+    #12c2e9,
+    #c471ed,
+    #f64F59
+  ); */
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#samplepost > h2, form {
+  max-width: 1000px;
+  min-width: 800px;
+  /* change this, but will it interfere with js? */
 }
 
 #userstories {
@@ -52,8 +102,8 @@ input {
 }
 
 footer {
-  background: #181818;
-  min-height: 50px;
+  background: #03426b;
+  height: 4rem;
   display: grid;
   place-content: center;
   color: white;
