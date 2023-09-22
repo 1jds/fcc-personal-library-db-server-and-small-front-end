@@ -5,6 +5,39 @@ body {
   background: #2e2e2e;
 }
 
+.btn-secondary {
+  all: unset;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 13px 23px;
+  border: 1px solid #fff;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  /* background: #fff; */
+  color: #fff;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  transition: 0.25s;
+  color: #222;
+  background: #f7f7f7;
+}
+
+// distinct focus for a11y users; could the contrast be improved?
+.btn-secondary:focus {
+  outline: 5px solid black;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+
+
 /* .page-wrapper {
   max-width: 1200px;
   margin-right: auto;
@@ -19,6 +52,8 @@ body {
   min-height: 70px;
   display: grid;
   place-content: center;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .hero-header {
@@ -39,10 +74,28 @@ body {
 }
 
 .hero-header > h2 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: clamp(1rem, 0.1563rem + 3.7500vw, 2.5rem);
+  /* font-size: clamp(1rem, 10vw + 0.5rem, 3rem); */
+  line-height: 1;
+  font-weight: 900;
 }
+
+.hero-header > h3 {
+  font-size: clamp(0.75rem, 0.3281rem + 1.8750vw, 1.5rem);
+} 
+
 .hero-header > h2, h3 {
   padding: 0rem 5rem;
+}
+
+@media screen and (max-width: 450px) {
+  .hero-header {
+    padding-top: 75px;
+  }
+  .hero-header > h2, h3 {
+    padding: 0rem 2rem;
+  }
 }
 
 .border {
