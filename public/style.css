@@ -5,6 +5,22 @@ body {
   background: #2e2e2e;
 }
 
+.btn-primary {
+  all: unset;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14px 24px;
+  border: none;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: linear-gradient(to right, rgb(0, 128, 153,0.8) 0%, rgb(0,93,154,0.8) 50%, rgb(3,66,107,0.8) 100%);
+  color: #fff;
+}
+
 .btn-secondary {
   all: unset;
   display: inline-block;
@@ -99,9 +115,10 @@ body {
 }
 
 .border {
-  border: 1px solid;
+  border: 3px solid #005d9a;
   padding: 10px;
-  background: red;
+  border-radius: 7px;
+  /* background: red; */
 }
 
 #sampleui {
@@ -130,16 +147,29 @@ body {
     #f64F59
   ); */
   padding: 4rem 2rem;
-  display: flex;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, minmax(min-content, 475px));
+  /* grid-template-columns: minmax(min-content, 300px) */
+  grid-template-areas:
+    "title title"
+    "test1 test2";
+  column-gap: 2rem;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
-#samplepost > h2, form {
+.samplepost__h2 {
+  grid-area: title;
+  place-self: center;
+}
+
+/* #samplepost > h2, form {
   max-width: 1000px;
   min-width: 800px;
   /* change this, but will it interfere with js? */
-}
+} */
 
 #userstories {
   background: green;
@@ -147,13 +177,13 @@ body {
 
 form {
   padding: 5px;
-  background: dodgerblue;
+  /* background: dodgerblue; */
 }
 
 label {
   display: block;
   font-weight: bold;
-  background: aqua;
+  /* background: aqua; */
 }
 
 input {
@@ -174,3 +204,4 @@ footer > p {
   max-width: 400px;
   text-align: center;
 }
+

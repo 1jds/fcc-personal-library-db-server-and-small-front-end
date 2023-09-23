@@ -19,18 +19,18 @@
         <h2>A user front-end for the Free Code Camp Personal Library challenge</h2>
         <h3>This Repl contains my solution to the challenge, using HTML5, CSS3, Node.js, Express, and MongoDB</h3>
       <!-- the aria-label here is for a11y screen-reader users; the inner text of the <a> tag should be ignored and the aria-label text read out instead, I believe -->
-        <a aria-label="click this link to see the original instructions for this challenge from the Free Code Camp website" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library" class="btn-secondary mt-1">See Challenge</a>
+        <a aria-label="click this link to see the original instructions for this challenge from the Free Code Camp website" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library" target="_blank" class="btn-secondary mt-1">See Challenge</a>
     </section>
 </header>
 <!-- <br> -->
 <section id='sampleposting'>
-  <h2 style="text-align: left">Test API responses</h2>
+  <h2 class="samplepost__h2">Test API responses</h2>
   <form action="/api/books" method="post" class="border">
     <h4>Test post to /api/books</h4>
     <label for="title">Book Title</label>
     <input type="text" id="title" name="title" value="">
     <br>
-    <input type="submit" value="Submit">
+    <input class="btn-primary mt-1" type="submit" value="Submit">
   </form>
   <form action="" method="post" id="commentTest" class="border">
     <h4>Test post to /api/books/{bookid}</h4>
@@ -38,7 +38,7 @@
     <input type="text" name="id" value="" id="idinputtest"><br>
     <label for="comment">Comment</label>
     <input type="text" id="comment" name="comment" value=""><br>
-    <input type="submit" value="Submit">
+    <input class="btn-primary mt-1" type="submit" value="Submit">
   </form>
 </section>
 <!-- <hr style='margin: 50px'> -->
