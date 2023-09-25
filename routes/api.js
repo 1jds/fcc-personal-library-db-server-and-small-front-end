@@ -28,7 +28,7 @@ module.exports = function(app, myDatabase) {
 
     .post(async function(req, res) {
       let title = req.body.title;
-      
+
       // for testing purposes only below this line
       const _id = new ObjectId(req.body._id) || null;
       if (req.body._id === '6505979fd75654f842df9c4d') {
@@ -45,7 +45,7 @@ module.exports = function(app, myDatabase) {
         return
       }
       // for testing purposes only above this line
-      
+
       if (!title) {
         res.send("missing required field title")
         return

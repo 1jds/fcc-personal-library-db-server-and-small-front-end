@@ -28,9 +28,10 @@
   <form action="/api/books" method="post" class="border">
     <h4>Test post to /api/books</h4>
     <label for="title">Book Title</label>
-    <input type="text" id="title" name="title" value="">
+    <textarea id="title" name="title" value=""></textarea>
+    <!-- <input type="text" id="title" name="title" value=""> -->
     <br>
-    <input class="btn-primary mt-1" type="submit" value="Submit">
+    <button class="btn-primary mt-1" type="submit" value="Submit">Submit</button>
   </form>
   <form action="" method="post" id="commentTest" class="border">
     <h4>Test post to /api/books/{bookid}</h4>

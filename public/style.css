@@ -20,6 +20,13 @@ body {
   background: linear-gradient(to right, rgb(0, 128, 153,0.8) 0%, rgb(0,93,154,0.8) 50%, rgb(3,66,107,0.8) 100%);
   color: #fff;
 }
+.btn-primary:hover {
+  /* transition: 1s; */
+  background: linear-gradient(to right, rgb(0, 128, 153,0.9) 0%, rgb(0,93,154,1) 50%, rgb(3,66,107,0.9) 100%);
+}
+.btn-primary:focus, focus-visible{
+  outline: 4px solid black;
+}
 
 .btn-secondary {
   all: unset;
@@ -43,9 +50,9 @@ body {
   background: #f7f7f7;
 }
 
-// distinct focus for a11y users; could the contrast be improved?
-.btn-secondary:focus {
-  outline: 5px solid black;
+/* distinct focus for a11y users; could the contrast be improved? */
+.btn-secondary:focus, focus-visible {
+  outline: 4px solid black;
 }
 
 .mt-1 {
@@ -160,6 +167,21 @@ body {
   align-items: center; */
 }
 
+#sampleposting > form {
+  background: #f9f9f9;
+}
+
+@media screen and (max-width: 650px) {
+  #sampleposting {
+    text-align: center;
+    background: #f0f0f0;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 .samplepost__h2 {
   grid-area: title;
   place-self: center;
@@ -189,6 +211,12 @@ label {
 input {
   /* margin-bottom: 5px; */
   background: orange;
+}
+
+#title {
+  width: 80%;
+  max-width: 40ch;
+  height: 10ch;
 }
 
 footer {
