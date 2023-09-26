@@ -28,18 +28,20 @@
   <form action="/api/books" method="post" class="border">
     <h4>Test post to /api/books</h4>
     <label for="title">Book Title</label>
-    <textarea id="title" name="title" value=""></textarea>
+    <textarea class="textarea-input" id="title" name="title" value=""></textarea>
     <!-- <input type="text" id="title" name="title" value=""> -->
-    <br>
+    <!-- <br> -->
     <button class="btn-primary mt-1" type="submit" value="Submit">Submit</button>
   </form>
   <form action="" method="post" id="commentTest" class="border">
     <h4>Test post to /api/books/{bookid}</h4>
     <label for="idinputtest">BookId to comment on</label>
-    <input type="text" name="id" value="" id="idinputtest"><br>
+    <textarea class="textarea-input" type="text" name="id" value="" id="idinputtest"></textarea>
+      <!-- <br> -->
     <label for="comment">Comment</label>
-    <input type="text" id="comment" name="comment" value=""><br>
-    <input class="btn-primary mt-1" type="submit" value="Submit">
+    <textarea class="textarea-input" type="text" id="comment" name="comment" value=""></textarea>
+    <!-- <br> -->
+    <button class="btn-primary mt-1" type="submit" value="Submit">Submit</button>
   </form>
 </section>
 <!-- <hr style='margin: 50px'> -->
