@@ -26,7 +26,8 @@
 <section id='sampleposting'>
   <h2 class="samplepost__h2">Test API responses</h2>
   <form action="/api/books" method="post" class="border">
-    <h4>Test post to /api/books</h4>
+    <h4>Test post to <span>/api/books</span></h4>
+    <p>Use this form to test sending a POST request to the database. Type the title of a book to be added to the library database. You should receive a response from the server with the title and an id.</p>
     <label for="title">Book Title</label>
     <textarea class="textarea-input" id="title" name="title" value=""></textarea>
     <!-- <input type="text" id="title" name="title" value=""> -->
@@ -34,7 +35,8 @@
     <button class="btn-primary mt-1" type="submit" value="Submit">Submit</button>
   </form>
   <form action="" method="post" id="commentTest" class="border">
-    <h4>Test post to /api/books/{bookid}</h4>
+    <h4>Test post to <span>/api/books/{bookid}</span></h4>
+    <p>Use this form to test sending a POST request to the database. Type the id of a book in the database and a comment about that book. You should receive a response from the server with the title, an id, and an array of comments.</p>
     <label for="idinputtest">BookId to comment on</label>
     <textarea class="textarea-input" type="text" name="id" value="" id="idinputtest"></textarea>
       <!-- <br> -->
@@ -46,7 +48,7 @@
 </section>
 <!-- <hr style='margin: 50px'> -->
 <section id='sampleui'>
-  <h2 style="text-align: left">Sample Front-End</h2>
+  <h2>Sample Front-End</h2>
   <form id="newBookForm" class="border">
     <label for="bookTitleToAdd">New Book Title</label>
     <input type="text" id="bookTitleToAdd" name="title" placeholder="Moby Dick" style="width: 295px">
@@ -60,7 +62,16 @@
   <button id='deleteAllBooks'>Delete all books...</button>
 </section>
 <footer>
+  <div class="custom-shape-divider-top-1695745367">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+    </svg>
+</div>
   <p>Thank you for viewing this demonstration page. To see other projects, please see my CodePen and GitHub pages using the links below.</p>
+  <div class="footer-links">
+    <span>ICON GOES HERE</span>
+    <span>LINKS GO HERE...</span>
+  </div>
 </footer>
 <!-- <hr style='margin: 50px'> -->
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"
@@ -78,5 +89,17 @@
     });
   });
 </script>
+  <!-- This method seems to work well for changing the textarea behaviour so that it grows automatically with text content: https://www.geeksforgeeks.org/how-to-create-auto-resize-textarea-using-javascript-jquery/ -->
+  <script type="text/javascript">
+        textareas = document.querySelectorAll(".textarea-input");
+        textareas.forEach(item => addEventListener('input', (e) => {
+            e.target.style.height = 'auto';
+            e.target.style.height = e.target.scrollHeight + 'px';          
+        }, false));
+ // This works. We could also change the 'forEach(item...' to 'forEach((item, index)...' and then change 'e.target.style...' to 'textareas[index].style...'
+// textareas.forEach((item, index) => {item.addEventListener('input', () => {textareas[index].style.height = 'auto';textareas[index].style.height = textareas[index].scrollHeight + 'px';})});
+    </script>
+ 
+    
 </body>
 </html>

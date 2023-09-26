@@ -173,6 +173,18 @@ body {
   flex-direction: column;
   align-items: center;
   background: #f9f9f9;
+  padding: 0.25rem 1.75rem 1.25rem 1.75rem;
+}
+
+#sampleposting > form > h4 {
+  font-size: 1.25rem;
+}
+
+#sampleposting > form > h4 > span {
+  font-family: 'Courier New', monospace;
+}
+#sampleposting > form > p {
+  color: #000;
 }
 
 @media screen and (max-width: 650px) {
@@ -223,19 +235,53 @@ input {
   width: 80%;
   max-width: 40ch;
   min-height: 7ch;
+   display: block;
+   overflow: hidden;
+   resize: none;
 }
 
 footer {
-  background: #03426b;
+  /* position: relative, so that the SVG section divider will work */
+  position: relative;
+  background: #042f5d;
   height: 4rem;
   display: grid;
-  place-content: center;
+  grid-template-columns: 1fr;
+  /* place-content: center; */
   color: white;
-  padding: 3rem;
+  padding: 5rem 3rem 2.5rem 3rem;
 }
 
 footer > p {
   max-width: 400px;
   text-align: center;
+  place-self: center;
 }
 
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* below styles from https://www.shapedivider.app/ */
+
+.custom-shape-divider-top-1695745367 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1695745367 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-top-1695745367 .shape-fill {
+    fill: #005d9a;
+}
