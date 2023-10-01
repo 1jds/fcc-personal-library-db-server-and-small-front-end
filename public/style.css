@@ -266,6 +266,10 @@ footer > p {
   justify-content: space-between;
 }
 
+.footer__footer-svg {
+  max-width: 2rem;
+}
+
 /* below styles from https://www.shapedivider.app/ */
 
 .custom-shape-divider-top-1695745367 {
