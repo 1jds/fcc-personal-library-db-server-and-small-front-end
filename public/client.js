@@ -26,9 +26,9 @@ $(document).ready(function() {
       $.each(data.comments, function(i, val) {
         comments.push('<li>' + val + '</li>');
       });
-      comments.push('<br><form id="newCommentForm"><input style="width:300px" type="text" class="form-control" id="commentToAdd" name="comment" placeholder="New Comment"></form>');
-      comments.push('<br><button class="btn btn-info addComment" id="' + data._id + '">Add Comment</button>');
-      comments.push('<button class="btn btn-danger deleteBook" id="' + data._id + '">Delete Book</button>');
+      comments.push('<br><form id="newCommentForm"><textarea style="width:300px" type="text" class="form-control textarea-input" id="commentToAdd" name="comment" placeholder="New Comment"></textarea></form>');
+      comments.push('<br><button class="btn-secondary addComment" id="' + data._id + '">Add Comment</button>');
+      comments.push('<button class="btn-secondary deleteBook" id="' + data._id + '">Delete Book</button>'); // some things in here seem to have been left here by mistake. For example, there were classes on these buttons that don't seem to point to anything in style.css. Maybe they did, and I've deleted that, or maybe it's just a mistake, and I could make a pull-request or something on that...
       $('#detailComments').html(comments.join(''));
     });
   });

@@ -48,18 +48,23 @@
 </section>
 <!-- <hr style='margin: 50px'> -->
 <section id='sampleui'>
+  <!-- child 1 -->
   <h2>Sample Front-End</h2>
+  <!-- child 2 -->
   <form id="newBookForm" class="border">
     <label for="bookTitleToAdd">New Book Title</label>
-    <input type="text" id="bookTitleToAdd" name="title" placeholder="Moby Dick" style="width: 295px">
-    <button type="submit" value="Submit" id="newBook">Submit New Book!</button>
+    <textarea class="textarea-input" type="text" id="bookTitleToAdd" name="title" placeholder="Moby Dick"></textarea>
+    <button class="btn-secondary" type="submit" value="Submit" id="newBook">Submit New Book!</button>
   </form>
+  <!-- child 3 may be present -->
   <div id='display'></div>
+  <!-- child 4 may be present -->
   <div id='bookDetail' class='border'>
     <p id='detailTitle'>Select a book to see it's details and comments</p>
     <ol id='detailComments'></ol>
   </div>
-  <button id='deleteAllBooks'>Delete all books...</button>
+  <!-- child 4 -->
+  <button class="btn-secondary" id='deleteAllBooks'>Delete all books...</button>
 </section>
 <footer>
   <div class="custom-shape-divider-top-1695745367">
@@ -70,7 +75,7 @@
   <p>Thank you for viewing this demonstration page. To see other projects, please see my CodePen and GitHub pages using the links below.</p>
   <div class="footer-links">
     <span>ICON GOES HERE</span>
-    <span>LINKS GO HERE...</span>
+    <img src="https://res.cloudinary.com/css-tricks/images/f_auto,q_auto/v1696025388/logo-white/logo-white.png?_i=AA" alt="CodePen Logo as SVG" />
   </div>
 </footer>
 <!-- <hr style='margin: 50px'> -->
@@ -93,7 +98,7 @@
   <script type="text/javascript">
         textareas = document.querySelectorAll(".textarea-input");
         textareas.forEach(item => addEventListener('input', (e) => {
-            e.target.style.height = 'auto';
+            // e.target.style.height = 'auto';
             e.target.style.height = e.target.scrollHeight + 'px';          
         }, false));
  // This works. We could also change the 'forEach(item...' to 'forEach((item, index)...' and then change 'e.target.style...' to 'textareas[index].style...'

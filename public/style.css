@@ -140,7 +140,7 @@ body {
 
 #sampleui > * {
   max-width: 1000px;
-  min-width: 800px;
+  /* min-width: 800px; */
   /* Change this */
 }
 
@@ -234,7 +234,9 @@ input {
   padding: 0.5rem;
   width: 80%;
   max-width: 40ch;
-  min-height: 7ch;
+  /* this initial height value will be overwritten by the script index.html*/
+  height: 2.5rem;
+  line-height: 1.5rem;
    display: block;
    overflow: hidden;
    resize: none;
@@ -244,12 +246,12 @@ footer {
   /* position: relative, so that the SVG section divider will work */
   position: relative;
   background: #042f5d;
-  height: 4rem;
+  min-height: 4rem;
   display: grid;
   grid-template-columns: 1fr;
   /* place-content: center; */
   color: white;
-  padding: 5rem 3rem 2.5rem 3rem;
+  padding: 5rem 2rem 2.5rem 2rem;
 }
 
 footer > p {
@@ -260,6 +262,7 @@ footer > p {
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -284,4 +287,8 @@ footer > p {
 
 .custom-shape-divider-top-1695745367 .shape-fill {
     fill: #005d9a;
+}
+
+.border {
+  border: 1px solid red;
 }
