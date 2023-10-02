@@ -24,7 +24,7 @@ body {
   /* transition: 1s; */
   background: linear-gradient(to right, rgb(0, 128, 153,0.9) 0%, rgb(0,93,154,1) 50%, rgb(3,66,107,0.9) 100%);
 }
-.btn-primary:focus, focus-visible{
+.btn-primary:focus-visible {
   outline: 4px solid black;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 /* distinct focus for a11y users; could the contrast be improved? */
-.btn-secondary:focus, focus-visible {
+.btn-secondary:focus-visible {
   outline: 4px solid black;
 }
 
@@ -209,9 +209,9 @@ body {
   /* change this, but will it interfere with js? */
 } */
 
-#userstories {
+/* #userstories {
   background: green;
-}
+} */
 
 form {
   padding: 5px;
@@ -224,10 +224,9 @@ label {
   /* background: aqua; */
 }
 
-input {
-  /* margin-bottom: 5px; */
+/* input {
   background: orange;
-}
+} */
 
 .textarea-input {
   margin: 0.5rem 0rem;
@@ -242,6 +241,11 @@ input {
    resize: none;
 }
 
+.textarea-input:focus-visible {
+  outline: 1px solid black inset;
+  border-radius: 2px;
+}
+
 footer {
   /* position: relative, so that the SVG section divider will work */
   position: relative;
@@ -251,7 +255,7 @@ footer {
   grid-template-columns: 1fr;
   /* place-content: center; */
   color: white;
-  padding: 5rem 2rem 2.5rem 2rem;
+  padding: 3rem 2rem 2rem 2rem;
 }
 
 footer > p {
@@ -260,14 +264,48 @@ footer > p {
   place-self: center;
 }
 
-.footer-links {
+.footer__footer-links-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .footer__footer-links-container {
+    margin: 0 auto;
+  }
+}
+
+.footer__footer-links {
+  height: 2rem;
+  width: 2rem;
+}
+
+.footer__footer-links:first-of-type {
+  width: 3rem;
+}
+
+.footer__footer-links:focus-visible {
+  outline: 4px solid #fff;
+}
+
+/* the ":not(.class)" selector is being used here, because while the other SVG icons have no stroke but a fill, the codepen SVG has a stroke but no fill... */
+.footer__footer-links:hover .footer__footer-svg:not(.footer__codepen-svg) {
+  fill: #FFDF00;
+}
+
+.footer__footer-links:hover .footer__codepen-svg {
+  stroke: #FFDF00;
+}
+
+.footer__footer-links:first-of-type {
+  margin-right: auto;
 }
 
 .footer__footer-svg {
-  max-width: 2rem;
+  max-height: 2rem;
 }
 
 /* below styles from https://www.shapedivider.app/ */
