@@ -14,7 +14,9 @@
 </head>
 <body>
 <header>
-  <h1 class="header-title">Personal Library</h1>
+  <section class="header__banner-title">
+    <h1>Personal Library</h1>
+  </section>
     <section class='hero-header'>
         <h2>A user front-end for the Free Code Camp Personal Library challenge</h2>
         <h3>This Repl contains my solution to the challenge, using HTML5, CSS3, Node.js, Express, and MongoDB</h3>
@@ -25,7 +27,7 @@
 <!-- <br> -->
 <section id='sampleposting'>
   <h2 class="samplepost__h2">Test API responses</h2>
-  <form action="/api/books" method="post" class="border">
+  <form action="/api/books" method="post" class="border-dark">
     <h4>Test post to <span>/api/books</span></h4>
     <p>Use this form to test sending a POST request to the database. Type the title of a book to be added to the library database. You should receive a response from the server with the title and an id.</p>
     <label for="title">Book Title</label>
@@ -34,7 +36,7 @@
     <!-- <br> -->
     <button class="btn-primary mt-1" type="submit" value="Submit">Submit</button>
   </form>
-  <form action="" method="post" id="commentTest" class="border">
+  <form action="" method="post" id="commentTest" class="border-dark">
     <h4>Test post to <span>/api/books/{bookid}</span></h4>
     <p>Use this form to test sending a POST request to the database. Type the id of a book in the database and a comment about that book. You should receive a response from the server with the title, an id, and an array of comments.</p>
     <label for="idinputtest">BookId to comment on</label>
@@ -51,7 +53,7 @@
   <!-- child 1 -->
   <h2>Sample Front-End</h2>
   <!-- child 2 -->
-  <form id="newBookForm" class="border">
+  <form id="newBookForm" class="border-light">
     <label for="bookTitleToAdd">New Book Title</label>
     <textarea class="textarea-input" type="text" id="bookTitleToAdd" name="title" placeholder="Moby Dick"></textarea>
     <button class="btn-secondary" type="submit" value="Submit" id="newBook">Submit New Book!</button>
@@ -59,7 +61,7 @@
   <!-- child 3 may be present -->
   <div id='display'></div>
   <!-- child 4 may be present -->
-  <div id='bookDetail' class='border'>
+  <div id='bookDetail' class='border-light'>
     <p id='detailTitle'>Select a book to see it's details and comments</p>
     <ol id='detailComments'></ol>
   </div>
@@ -72,7 +74,7 @@
         <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
     </svg>
 </div>
-  <p>Thank you for viewing this demonstration page. To see other projects, please see my CodePen, GitHub, and Replit pages using the links below.</p>
+  <p>Thank you for viewing this demonstration page. To see other projects, please see my CodePen, GitHub, and Replit pages using these links.</p>
   
   <div class="footer__footer-links-container">
     
@@ -126,7 +128,7 @@ c35 0 68 -8 97 -22z"/>
     <!-- inline SVG for codepen -->
     <a class="footer__footer-links" href="https://codepen.io/Abrogated/pen/eYPPmYZ" target="_blank">
       <title id="codepenLogoTitle">Codepen logo linked to the developer's codepen.io profile</title>
-      <svg class="footer__footer-svg footer__codepen-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false" aria-labelledby="codepenLogoTitle">
+      <svg class="footer__footer-svg footer__codepen-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke="#fff" fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false" aria-labelledby="codepenLogoTitle">
         <path d="M3.06 41.732L32 60.932l28.94-19.2V22.268L32 3.068l-28.94 19.2zm57.878 0L32 22.268 3.06 41.732m0-19.463L32 41.47l28.94-19.2M32 3.068v19.2m0 19.463v19.2" stroke-width="6.05"/></svg></a>
     <!-- inline SVG for GitHub -->
     <a class="footer__footer-links" href="https://github.com/1jds" target="_blank">
