@@ -262,6 +262,22 @@ label {
   border-radius: 1px;
 }
 
+#display {
+  background: green;
+}
+
+.listWrapper {
+  padding: 0;
+}
+
+.bookItem {
+  list-style-type: none;
+}
+
+.bookItem:nth-child(even) {
+  background: pink;
+}
+
 footer {
   /* position: relative, so that the SVG section divider will work */
   position: relative;
@@ -345,4 +361,5 @@ footer > p {
 .custom-shape-divider-top-1695745367 .shape-fill {
     fill: #005d9a;
 }
+
 
