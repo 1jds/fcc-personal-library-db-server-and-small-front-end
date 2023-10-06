@@ -51,7 +51,7 @@ $(document).ready(function() {
       type: 'delete',
       success: function(data) {
         //update list
-        $('#detailComments').html('<p style="color: hotpink;">' + data + '<p><p>Refresh the page</p>');
+        $('#detailComments').html('<p style="color: gold; text-transform: capitalize;">' + data + '. Refresh the page.</p>');
       }
     });
   });
