@@ -6,20 +6,20 @@ $(document).ready(function() {
     //let  items = [];
     itemsRaw = data;
     $.each(data, function(i, val) {
-      items.push('<li class="bookItem" id="' + i + '">' + val.title + ' - ' + val.commentcount + ' comments</li>');
+      items.push('<button class="bookItem" id="' + i + '">' + val.title + ' - ' + val.commentcount + ' comments</button>');
       return (i !== 14);
     });
     if (items.length >= 15) {
       items.push('<p>...and ' + (data.length - 15) + ' more!</p>');
     }
-    $('<ul/>', {
+    $('<div/>', {
       'class': 'listWrapper',
       html: items.join('')
     }).appendTo('#display');
   });
 
   let comments = [];
-  $('#display').on('click', 'li.bookItem', function() {
+  $('#display').on('click', 'button.bookItem', function() {
     $("#detailTitle").html('<p>' + itemsRaw[this.id].title + '</p><p>(id: ' + itemsRaw[this.id]._id + ')</p>');
     $.getJSON('/api/books/' + itemsRaw[this.id]._id, function(data) {
       comments = [];

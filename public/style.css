@@ -132,20 +132,45 @@ body {
 }
 
 #sampleui {
-  background: #005d9a;
-  /* rgb(0, 93, 154) */
-  color: #fff;
-  padding: 4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  text-align: center;
+    text-align: center;
+    background: #005d9a;
+    color: #fff;
+    padding: 4rem 2rem;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, minmax(min-content, 475px));
+  grid-template-areas:
+    "title title"
+    "addNew addNew"
+    "libraryBooks bookDetails";
+  gap: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  #sampleui {
+    /* rgb(0, 93, 154) */
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  } 
 }
 
 #sampleui > * {
   max-width: 1000px;
   /* min-width: 800px; */
   /* Change this */
+}
+
+#sampleui > h2 {
+  grid-area: title;
+  margin-bottom: 0;
+}
+
+#newBookForm {
+  grid-area: addNew;
+  margin-bottom: 0;
 }
 
 #sampleui > form {
@@ -263,19 +288,53 @@ label {
 }
 
 #display {
-  background: green;
+  padding: 0.75rem 1.75rem 1.25rem 1.75rem;
 }
 
 .listWrapper {
   padding: 0;
+  /* text-align: left; */
+  /* padding: 0rem 1rem; */
+  display: flex;
+  flex-direction: column;
 }
 
 .bookItem {
-  list-style-type: none;
+  /* list-style-type: none; */
+  /* margin-bottom: 0.5rem; */
+  all: unset;
+  display: block;
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+.bookItem:hover {
+  cursor: pointer;
+  outline: 2px solid #fff;
+}
+
+.bookItem:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.bookItem:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.bookItem:nth-child(15) {
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .bookItem:nth-child(even) {
-  background: pink;
+  /* background: rgba(194, 237, 255, 0.25); */
+  /* background: rgba(0, 93, 154, 0.1); */
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bookItem:nth-child(odd) {
+  /* background: rgba(194, 237, 255, 0.25); */
+  /* background: rgba(0, 93, 154, 0.1); */
+  background: rgba(255, 255, 255, 0.1);
 }
 
 footer {
