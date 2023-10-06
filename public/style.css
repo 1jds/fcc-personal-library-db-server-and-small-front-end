@@ -111,7 +111,7 @@ body {
   font-size: clamp(1rem, 0.3281rem + 1.8750vw, 1.5rem);
 } 
 
-.hero-header > h2, h3 {
+.hero-header > h2, .hero-header > h3 {
   padding: 0rem 5rem;
 }
 
@@ -178,13 +178,19 @@ body {
     flex-direction: column;
     align-items: center;
     /* background: #f9f9f9; */
-    padding: 0.25rem 1.75rem 1.25rem 1.75rem;
+    padding: 0.25rem 1.75rem 1.25rem;
 }
 
 .border-light {
   border: 3px solid #FFDF00;
-  padding: 10px;
+  padding: 0.75rem 1.75rem 1.25rem;
   border-radius: 7px;
+}
+
+@media screen and (max-width: 450px) {
+  .border-light {
+    padding: 0.75rem 0.75rem 1.25rem;
+  }
 }
 
 #sampleposting {
@@ -288,7 +294,7 @@ label {
 }
 
 #display {
-  padding: 0.75rem 1.75rem 1.25rem 1.75rem;
+  /* padding: 0.75rem 1.75rem 1.25rem 1.75rem; */
 }
 
 .listWrapper {
@@ -308,7 +314,7 @@ label {
   margin: 0;
 }
 
-.bookItem:hover {
+.bookItem:hover, .bookItem:focus-visible {
   cursor: pointer;
   outline: 2px solid #fff;
 }
@@ -335,6 +341,84 @@ label {
   /* background: rgba(194, 237, 255, 0.25); */
   /* background: rgba(0, 93, 154, 0.1); */
   background: rgba(255, 255, 255, 0.1);
+}
+
+#bookDetail {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#detailComments {
+  /* background: pink; */
+  /* text-align: left */
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+  margin-bottom: 1rem;
+}
+
+.specificBookComment {
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+.specificBookComment:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.specificBookComment:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.specificBookComment:nth-child(even) {
+  /* background: rgba(194, 237, 255, 0.25); */
+  /* background: rgba(0, 93, 154, 0.1); */
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.specificBookComment:nth-child(odd) {
+  /* background: rgba(194, 237, 255, 0.25); */
+  /* background: rgba(0, 93, 154, 0.1); */
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#detailTitle {
+  /* border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff; */
+	margin: 0;
+  margin-bottom: 1rem;
+  border-top: 1px solid #042f5d;
+	border-bottom: 1px solid #6e91b7;
+  border-radius: 0.5rem;
+	padding: 1rem 0rem;
+}
+
+.detailTitle__title {
+  margin: 0;
+	margin-bottom: 0.25rem;
+  font-weight: bold;
+	text-transform: capitalize;
+}
+
+.detailTitle__id {
+	margin: 0;
+}
+
+.jQueryBtns {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+	gap: 1.5rem;
+}
+
+#newCommentForm {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+#newCommentForm > textarea {
+  margin: 0 auto;
 }
 
 footer {

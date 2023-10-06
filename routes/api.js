@@ -28,7 +28,7 @@ module.exports = function(app, myDatabase) {
 
     .post(async function(req, res) {
       let title = req.body.title;
-
+      console.log("This route was fired...")
       // for testing purposes only below this line
       const _id = new ObjectId(req.body._id) || null;
       if (req.body._id === '6505979fd75654f842df9c4d') {
