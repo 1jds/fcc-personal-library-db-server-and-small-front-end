@@ -21,7 +21,6 @@ body {
   color: #fff;
 }
 .btn-primary:hover {
-  /* transition: 1s; */
   background: linear-gradient(to right, rgb(0, 128, 153,0.9) 0%, rgb(0,93,154,1) 50%, rgb(3,66,107,0.9) 100%);
 }
 .btn-primary:focus-visible {
@@ -40,7 +39,6 @@ body {
   padding: 13px 23px;
   border: 1px solid #fff;
   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-  /* background: #fff; */
   color: #fff;
 }
 
@@ -59,13 +57,6 @@ body {
   margin-top: 1rem;
 }
 
-
-
-/* .page-wrapper {
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-} */
 .header__banner-title {
   background: #005d9a;
   color: #fff;
@@ -90,8 +81,6 @@ body {
     color: white;
     overflow: hidden;
     background: #005d9a;  /* fallback for old browsers */
-  /* rgb(0, 93, 154) */
-  /* rgb(3, 66, 107) */
     background: linear-gradient(rgb(3,66,107,0.8), rgb(0,93,154,0.8)), url("https://images.unsplash.com/photo-1530608031805-8e170c1b793a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2748&q=80");
     background-size: cover;
     background-repeat: no-repeat;
@@ -100,8 +89,6 @@ body {
 }
 
 .hero-header > h2 {
-  /* font-size: 2rem; */
-  /* font-size: clamp(1rem, 10vw + 0.5rem, 3rem); */
   font-size: clamp(1.25rem, 0.1563rem + 3.7500vw, 2.5rem);
   line-height: 1;
   font-weight: 900;
@@ -116,9 +103,6 @@ body {
 }
 
 @media screen and (max-width: 450px) {
-  /* .hero-header {
-    padding-top: 75px;
-  } */
   .hero-header > h2, h3 {
     padding: 0rem 1rem;
   }
@@ -128,7 +112,6 @@ body {
   border: 3px solid #005d9a;
   padding: 10px;
   border-radius: 7px;
-  /* background: red; */
 }
 
 #sampleui {
@@ -148,7 +131,6 @@ body {
 
 @media screen and (max-width: 750px) {
   #sampleui {
-    /* rgb(0, 93, 154) */
     padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
@@ -159,8 +141,6 @@ body {
 
 #sampleui > * {
   max-width: 1000px;
-  /* min-width: 800px; */
-  /* Change this */
 }
 
 #sampleui > h2 {
@@ -177,12 +157,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background: #f9f9f9; */
     padding: 0.25rem 1.75rem 1.25rem;
 }
 
 .border-light {
-  /* border: 3px solid #FFDF00; */
   border: 3px solid gold;
   padding: 0.75rem 1.75rem 1.25rem;
   border-radius: 7px;
@@ -198,24 +176,14 @@ body {
   text-align: center;
   background: #f0f0f0;
   color: #03426b;
-  /* background-image: linear-gradient(
-    45deg,
-    #12c2e9,
-    #c471ed,
-    #f64F59
-  ); */
   padding: 4rem 2rem;
   display: grid;
   place-content: center;
   grid-template-columns: repeat(2, minmax(min-content, 475px));
-  /* grid-template-columns: minmax(min-content, 300px) */
   grid-template-areas:
     "title title"
     "test1 test2";
   column-gap: 2rem;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
 }
 
 #sampleposting > form {
@@ -253,35 +221,17 @@ form > h4 {
   place-self: center;
 }
 
-/* #samplepost > h2, form {
-  max-width: 1000px;
-  min-width: 800px;
-  /* change this, but will it interfere with js? */
-} */
-
-/* #userstories {
-  background: green;
-} */
-
-/* form {
-  padding: 5px;
-} */
-
 label {
   display: block;
   font-weight: bold;
 }
-
-/* input {
-  background: orange;
-} */
 
 .textarea-input {
   margin: 0.5rem 0rem;
   padding: 0.5rem;
   width: 80%;
   max-width: 40ch;
-  /* this initial height value will be overwritten by the script index.html*/
+  /* this initial height value will be overwritten by the script in index.html*/
   height: 2.5rem;
   line-height: 1.5rem;
    display: block;
@@ -294,21 +244,13 @@ label {
   border-radius: 1px;
 }
 
-#display {
-  /* padding: 0.75rem 1.75rem 1.25rem 1.75rem; */
-}
-
 .listWrapper {
   padding: 0;
-  /* text-align: left; */
-  /* padding: 0rem 1rem; */
   display: flex;
   flex-direction: column;
 }
 
 .bookItem {
-  /* list-style-type: none; */
-  /* margin-bottom: 0.5rem; */
   all: unset;
   display: block;
   padding: 0.75rem 1rem;
@@ -333,14 +275,10 @@ label {
 }
 
 .bookItem:nth-child(even) {
-  /* background: rgba(194, 237, 255, 0.25); */
-  /* background: rgba(0, 93, 154, 0.1); */
   background: rgba(255, 255, 255, 0.05);
 }
 
 .bookItem:nth-child(odd) {
-  /* background: rgba(194, 237, 255, 0.25); */
-  /* background: rgba(0, 93, 154, 0.1); */
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -351,11 +289,8 @@ label {
 }
 
 #detailComments {
-  /* background: pink; */
-  /* text-align: left */
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
   margin-bottom: 1rem;
 }
 
@@ -373,20 +308,14 @@ label {
 }
 
 .specificBookComment:nth-child(even) {
-  /* background: rgba(194, 237, 255, 0.25); */
-  /* background: rgba(0, 93, 154, 0.1); */
   background: rgba(255, 255, 255, 0.05);
 }
 
 .specificBookComment:nth-child(odd) {
-  /* background: rgba(194, 237, 255, 0.25); */
-  /* background: rgba(0, 93, 154, 0.1); */
   background: rgba(255, 255, 255, 0.1);
 }
 
 #detailTitle {
-  /* border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff; */
 	margin: 0;
   margin-bottom: 1rem;
   border-top: 1px solid #042f5d;
@@ -505,5 +434,3 @@ footer > p {
 .custom-shape-divider-top-1695745367 .shape-fill {
     fill: #005d9a;
 }
-
-
