@@ -294,6 +294,14 @@ label {
   margin-bottom: 1rem;
 }
 
+#detailComments:empty {
+  display: none;
+}
+
+#detailCommentsForm:empty {
+  display: none;
+}
+
 .specificBookComment {
   padding: 0.75rem 1rem;
   margin: 0;
