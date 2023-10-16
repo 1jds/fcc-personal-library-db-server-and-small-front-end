@@ -1,9 +1,27 @@
+/* ==============
+   Global Styles
+   ============== */
+
 body {
   font-family: system-ui;
   margin: 0;
   line-height: 1.5;
   background: #2e2e2e;
 }
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+form > h4 {
+  font-size: 1.25rem;
+}
+
+
+/* ==============
+   Utility Styles
+   ============== */
 
 .btn-primary {
   all: unset;
@@ -57,6 +75,23 @@ body {
   margin-top: 1rem;
 }
 
+.border-dark {
+  border: 3px solid #005d9a;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.border-light {
+  border: 3px solid gold;
+  padding: 0.75rem 1.75rem 1.25rem;
+  border-radius: 7px;
+}
+
+
+/* ==============
+   Header/Hero Styles
+   ============== */
+
 .header__banner-title {
   background: #005d9a;
   color: #fff;
@@ -102,75 +137,10 @@ body {
   padding: 0rem 5rem;
 }
 
-@media screen and (max-width: 450px) {
-  .hero-header > h2, h3 {
-    padding: 0rem 1rem;
-  }
-}
 
-.border-dark {
-  border: 3px solid #005d9a;
-  padding: 10px;
-  border-radius: 7px;
-}
-
-#sampleui {
-    text-align: center;
-    background: #005d9a;
-    color: #fff;
-    padding: 4rem 2rem;
-  display: grid;
-  place-content: center;
-  grid-template-columns: repeat(2, minmax(min-content, 475px));
-  grid-template-areas:
-    "title title"
-    "addNew addNew"
-    "libraryBooks bookDetails";
-  gap: 2rem;
-}
-
-@media screen and (max-width: 750px) {
-  #sampleui {
-    padding: 4rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-  } 
-}
-
-#sampleui > * {
-  max-width: 1000px;
-}
-
-#sampleui > h2 {
-  grid-area: title;
-  margin-bottom: 0;
-}
-
-#newBookForm {
-  grid-area: addNew;
-  margin-bottom: 0;
-}
-
-#sampleui > form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.25rem 1.75rem 1.25rem;
-}
-
-.border-light {
-  border: 3px solid gold;
-  padding: 0.75rem 1.75rem 1.25rem;
-  border-radius: 7px;
-}
-
-@media screen and (max-width: 450px) {
-  .border-light {
-    padding: 0.75rem 0.75rem 1.25rem;
-  }
-}
+/* ==============
+   Test API Section
+   ============== */
 
 #sampleposting {
   text-align: center;
@@ -194,9 +164,6 @@ body {
   padding: 0.25rem 1.75rem 1.25rem 1.75rem;
 }
 
-form > h4 {
-  font-size: 1.25rem;
-}
 
 #sampleposting > form > h4 > span {
   font-family: monospace, 'Courier New';
@@ -205,25 +172,9 @@ form > h4 {
   color: #000;
 }
 
-@media screen and (max-width: 650px) {
-  #sampleposting {
-    text-align: center;
-    background: #f0f0f0;
-    padding: 4rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-
 .samplepost__h2 {
   grid-area: title;
   place-self: center;
-}
-
-label {
-  display: block;
-  font-weight: bold;
 }
 
 .textarea-input {
@@ -242,6 +193,47 @@ label {
 .textarea-input:focus, .textarea-input:focus-visible {
   outline: 1px solid black inset;
   border-radius: 1px;
+}
+
+
+/* ==============
+   Sample Front-end Section
+   ============== */
+
+#sampleui {
+    text-align: center;
+    background: #005d9a;
+    color: #fff;
+    padding: 4rem 2rem;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, minmax(min-content, 475px));
+  grid-template-areas:
+    "title title"
+    "addNew addNew"
+    "libraryBooks bookDetails";
+  gap: 2rem;
+}
+
+#sampleui > * {
+  max-width: 1000px;
+}
+
+#sampleui > h2 {
+  grid-area: title;
+  margin-bottom: 0;
+}
+
+#newBookForm {
+  grid-area: addNew;
+  margin-bottom: 0;
+}
+
+#sampleui > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.25rem 1.75rem 1.25rem;
 }
 
 .listWrapper {
@@ -363,6 +355,11 @@ label {
   margin: 0 auto;
 }
 
+
+/* ==============
+   Footer Styles
+   ============== */
+
 footer {
   /* position: relative, so that the SVG section divider will work */
   position: relative;
@@ -388,11 +385,6 @@ footer > p {
   gap: 0.75rem;
 }
 
-@media screen and (min-width: 750px) {
-  .footer__footer-links-container {
-    margin: 0 auto;
-  }
-}
 
 .footer__footer-links {
   height: 2rem;
@@ -424,8 +416,8 @@ footer > p {
   max-height: 2rem;
 }
 
-/* below styles from https://www.shapedivider.app/ */
-
+/* Below styles from https://www.shapedivider.app/
+   These create the 'wedge shape at the footer divider top' */
 .custom-shape-divider-top-1695745367 {
     position: absolute;
     top: 0;
@@ -445,4 +437,49 @@ footer > p {
 
 .custom-shape-divider-top-1695745367 .shape-fill {
     fill: #005d9a;
+}
+
+
+/* ==============
+   Media Queries
+   ============== */
+
+@media screen and (max-width: 450px) {
+  .hero-header > h2, h3 {
+    padding: 0rem 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .border-light {
+    padding: 0.75rem 0.75rem 1.25rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #sampleposting {
+    text-align: center;
+    background: #f0f0f0;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #sampleui {
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  } 
+}
+
+
+@media screen and (min-width: 750px) {
+  .footer__footer-links-container {
+    margin: 0 auto;
+  }
 }
