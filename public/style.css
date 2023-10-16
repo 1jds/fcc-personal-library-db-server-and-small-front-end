@@ -1,5 +1,17 @@
+/* 
+  Table of Contents:
+    1. Global Styles
+    2. Utility Styles
+    3. Header/Hero Styles
+    4. Test API Section
+    5. Sample Front-end Section
+    6. Footer Styles
+    7. Media Queries
+*/
+
+
 /* ==============
-   Global Styles
+   1. Global Styles
    ============== */
 
 body {
@@ -20,7 +32,7 @@ form > h4 {
 
 
 /* ==============
-   Utility Styles
+   2. Utility Styles
    ============== */
 
 .btn-primary {
@@ -89,7 +101,7 @@ form > h4 {
 
 
 /* ==============
-   Header/Hero Styles
+   3. Header/Hero Styles
    ============== */
 
 .header__banner-title {
@@ -139,7 +151,7 @@ form > h4 {
 
 
 /* ==============
-   Test API Section
+   4. Test API Section
    ============== */
 
 #sampleposting {
@@ -197,7 +209,7 @@ form > h4 {
 
 
 /* ==============
-   Sample Front-end Section
+   5. Sample Front-end Section
    ============== */
 
 #sampleui {
@@ -357,7 +369,7 @@ form > h4 {
 
 
 /* ==============
-   Footer Styles
+   6. Footer Styles
    ============== */
 
 footer {
@@ -441,7 +453,7 @@ footer > p {
 
 
 /* ==============
-   Media Queries
+   7. Media Queries
    ============== */
 
 @media screen and (max-width: 450px) {
