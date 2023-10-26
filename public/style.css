@@ -154,7 +154,7 @@ form > h4 {
    4. Test API Section
    ============== */
 
-#sampleposting {
+.sampleposting {
   text-align: center;
   background: #f0f0f0;
   color: #03426b;
@@ -168,7 +168,7 @@ form > h4 {
   column-gap: 2rem;
 }
 
-#sampleposting > form {
+.sampleposting > form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,10 +177,10 @@ form > h4 {
 }
 
 
-#sampleposting > form > h4 > span {
+.sampleposting > form > h4 > span {
   font-family: monospace, 'Courier New';
 }
-#sampleposting > form > p {
+.sampleposting > form > p {
   color: #000;
 }
 
@@ -212,7 +212,7 @@ form > h4 {
    5. Sample Front-end Section
    ============== */
 
-#sampleui {
+.sampleui {
     text-align: center;
     background: #005d9a;
     color: #fff;
@@ -227,21 +227,21 @@ form > h4 {
   gap: 2rem;
 }
 
-#sampleui > * {
+.sampleui > * {
   max-width: 1000px;
 }
 
-#sampleui > h2 {
+.sampleui > h2 {
   grid-area: title;
   margin-bottom: 0;
 }
 
-#newBookForm {
+.new-book-form {
   grid-area: addNew;
   margin-bottom: 0;
 }
 
-#sampleui > form {
+.sampleui > form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -286,23 +286,23 @@ form > h4 {
   background: rgba(255, 255, 255, 0.1);
 }
 
-#bookDetail {
+.book-detail {
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-#detailComments {
+.detail-comments {
 	display: flex;
 	flex-direction: column;
   margin-bottom: 1rem;
 }
 
-#detailComments:empty {
+.detail-comments:empty {
   display: none;
 }
 
-#detailCommentsForm:empty {
+.detail-comments-form:empty {
   display: none;
 }
 
@@ -331,7 +331,7 @@ form > h4 {
   background: rgba(255, 255, 255, 0.1);
 }
 
-#detailTitle {
+.detail-title {
 	margin: 0;
   margin-bottom: 1rem;
   border-top: 1px solid #042f5d;
@@ -340,14 +340,14 @@ form > h4 {
 	padding: 1rem 0rem;
 }
 
-.detailTitle__title {
+.detail-title__title {
   margin: 0;
 	margin-bottom: 0.25rem;
   font-weight: bold;
 	text-transform: capitalize;
 }
 
-.detailTitle__id {
+.detail-title__id {
 	margin: 0;
 }
 
@@ -358,12 +358,12 @@ form > h4 {
 	gap: 1.5rem;
 }
 
-#newCommentForm {
+.new-comment-form {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-#newCommentForm > textarea {
+.new-comment-form > textarea {
   margin: 0 auto;
 }
 
@@ -469,7 +469,7 @@ footer > p {
 }
 
 @media screen and (max-width: 650px) {
-  #sampleposting {
+  .sampleposting {
     text-align: center;
     background: #f0f0f0;
     padding: 4rem 1rem;
@@ -480,7 +480,7 @@ footer > p {
 }
 
 @media screen and (max-width: 750px) {
-  #sampleui {
+  .sampleui {
     padding: 4rem 1rem;
     display: flex;
     flex-direction: column;

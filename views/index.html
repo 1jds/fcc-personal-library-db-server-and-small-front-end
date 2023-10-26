@@ -19,7 +19,7 @@
         <a aria-label="click this link to see the original instructions for this challenge from the Free Code Camp website" href="https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/personal-library" target="_blank" class="btn-secondary mt-1">See Challenge</a>
     </section>
 </header>
-<section id='sampleposting'>
+<section id='sampleposting' class='sampleposting'>
   <h2 class="samplepost__h2">Test API responses</h2>
   <form action="/api/books" method="post" class="border-dark">
     <h4>Test post to <span>/api/books</span></h4>
@@ -38,11 +38,11 @@
     <button class="btn-primary mt-1" type="submit" value="Submit">Submit</button>
   </form>
 </section>
-<section id='sampleui'>
+<section id='sampleui' class='sampleui'>
   <!-- child 1 -->
   <h2>Sample Front-End</h2>
   <!-- child 2 -->
-  <form id="newBookForm" class="border-light">
+  <form id="newBookForm" class="new-book-form border-light">
     <h4>Add a New Book</h4>
     <p>Use this form to add a new book title to the library. You will then be able to see it added to the list of books held by the library. From there, you can add a comment about the book.</p>
     <label for="bookTitleToAdd">New Book Title</label>
@@ -54,11 +54,11 @@
     <h3>Books In The Library</h3>
   </div>
   <!-- child 4 may be present -->
-  <div id='bookDetail' class='border-light'>
+  <div id='bookDetail' class='book-detail border-light'>
     <h3>Selected Book Details</h3>
-    <p id='detailTitle'>Select a book to see it's details and comments</p>
-    <div id='detailComments'></div>
-    <div id='detailCommentsForm'></div>
+    <p id='detailTitle' class="detail-title">Select a book to see it's details and comments</p>
+    <div id='detailComments' class='detail-comments'></div>
+    <div id='detailCommentsForm' class='detail-comments-form'></div>
   </div>
   <!-- child 4 -->
   <button class="btn-secondary" id='deleteAllBooks'>Delete all books...</button>

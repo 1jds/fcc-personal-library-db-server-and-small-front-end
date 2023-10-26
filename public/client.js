@@ -21,7 +21,7 @@ $(document).ready(function() {
   let comments = [];
   $('#display').on('click', 'button.bookItem', function() {
 
-    $("#detailTitle").html('<p class="detailTitle__title">' + itemsRaw[this.id].title + '</p><p class="detailTitle__id">ID: ' + itemsRaw[this.id]._id + '</p>');
+    $("#detailTitle").html('<p class="detail-title__title">' + itemsRaw[this.id].title + '</p><p class="detail-title__id">ID: ' + itemsRaw[this.id]._id + '</p>');
 
     $.getJSON('/api/books/' + itemsRaw[this.id]._id, function(data) {
 
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
       let commentsForm = [];
 
-      commentsForm.push('<form id="newCommentForm"><textarea type="text" class="form-control textarea-input" id="commentToAdd" name="comment" placeholder="New Comment"></textarea></form>');
+      commentsForm.push('<form id="newCommentForm" class="new-comment-form"><textarea type="text" class="form-control textarea-input" id="commentToAdd" name="comment" placeholder="New Comment"></textarea></form>');
 
       commentsForm.push('<div class="jQueryBtns"><button class="btn-secondary addComment" id="' + data._id + '">Add Comment</button><button class="btn-secondary deleteBook" id="' + data._id + '">Delete Book</button></div>');
 
